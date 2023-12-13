@@ -15,7 +15,7 @@
                         <div class="card" style="width: 18rem; display: inline-block">
                             <div class="member-img"> <img
                                     src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="card-body">
+                            <div class="card-body" wire:poll>
                                 <h5 class="card-title">{{$user->name}}</h5>
                                 <div class="online-spot-dashboard" style="background: {{$user->last_seen >=now()->subMinutes(1)?'#049304':'#df0000'}};"></div>
 

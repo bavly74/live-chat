@@ -30,13 +30,16 @@ class Chat extends Component
 
     public function sendMessage()
     {
+        if(!empty($this->messageText)){
         Message::create([
             'from' => auth()->user()->id,
             'message' => $this->messageText,
             'to'=>$this->receiverId
         ]);
+            $this->reset('messageText');
 
-        $this->reset('messageText');
+
+        }
     }
 
 }
