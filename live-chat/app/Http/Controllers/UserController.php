@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-        $users=User::orderBy('last_seen','DESC')->get();
+        $users=User::orderBy('last_seen','DESC')->where('id','!=',auth()->user()->id)->get();
         return view('dashboard',compact('users'));
     }
 

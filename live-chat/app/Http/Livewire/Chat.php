@@ -15,7 +15,7 @@ class Chat extends Component
     public function render()
     {
 
-        $users=User::orderBy('last_seen','DESC')->get();
+        $users=User::orderBy('last_seen','DESC')->take(6)->get();
 //        $messages = Message::where('to',$this->receiverId)->where('from',auth()->user()->id)->latest()->take(10)->get()->sortBy('id');
         $messages = Message::where(function ($query) {
             $query->where('to', $this->receiverId)

@@ -139,10 +139,12 @@ img{ max-width:100%;}
     width: 60%;
     border: 2px solid #0000003d;
     border-radius: 50px;
-    /* box-shadow: 2px -2px; */
+    height: 89px;
     padding: 8px 15px 8px 14px;
     margin: 14px;
     margin-inline: auto;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .incoming_msg_img-users {
     display: inline-block;
@@ -162,4 +164,17 @@ img{ max-width:100%;}
     border-radius: 10px;
     position: absolute;
     top: 25%;
+}
+.member-img{
+
+    margin-left: 15%;
+    margin-top: 6%;
+}
+.online-spot-dashboard{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 8%;
+    left: 26%;
 }
